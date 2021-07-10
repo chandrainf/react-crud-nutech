@@ -8,7 +8,7 @@
 
 ✅ MySQL DB for management data
 
-### 🔌Cara Me
+### 🔌How to Use
 
 1. Install dependencies with the command `yarn install` or `npm install`
 2. Create a database on the MySQL server and then import react-crud-nutech file.
