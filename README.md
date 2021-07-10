@@ -17,4 +17,4 @@
 
 ### Screenshoot
 
-![](https://github.com/chandrainf/react-crud-nutech/blob/master/screenshoot/Screenshot1.png?raw=true)
+![](https://github.com/chandrainf/react-crud-nutech/blob/master/screenshoot/Screenshot_1.png?raw=true)
