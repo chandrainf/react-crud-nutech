@@ -1,0 +1,84 @@
+div.product-bg{
+  background-color: transparent;
+  font-family: 'Work Sans';
+  margin-top: -30px;
+}
+
+img.product-img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  max-height: 251px;
+}
+
+div.card {
+  background: #ffffff;
+  box-shadow: 0px 0px 14px rgba(173, 173, 173, 0.25);
+  border-radius: 15px;
+  max-height: 410px;
+  min-height: 410px;
+  cursor: pointer;
+}
+
+div.card p{
+  font-family: 'Lato';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  line-height: 16px;
+}
+
+p.product-name {
+  line-height: 24px;
+  color: #000000;
+  /* margin-top: -10px; */
+}
+
+p.purchasePrice {
+  font-family: "Metropolis Medium";
+  color: #db3022;
+  /* margin-top: -10px; */
+}
+
+p.salePrice {
+  font-family: "Metropolis Medium";
+  color: black;
+  /* margin-top: -10px; */
+}
+
+p.teks-store {
+  font-family: "Metropolis Medium";
+  font-size: 12px;
+  line-height: 12px;
+  color: #9b9b9b;
+  /* margin-top: -5px; */
+}
+
+
+button.btn-pagination{
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 25px;
+  color: black;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 67px;
+  height: 37px;
+  background-color: #eef2f5;
+  margin-top: 50px;
+  outline: none;
+  cursor: pointer;
+}
+
+button.btn-pagination:hover{
+  background-color: black;
+  color: white;
+}
+
+button.btn-pagination:focus{
+  background:black;
+  color: white;
+}
