@@ -1,0 +1,80 @@
+div.product-detail-bg{
+    background-color: transparent;
+    font-family: 'Work Sans';
+    margin-top: -30px;
+  }
+  
+  p.title{
+    font-size: 1.5vw;
+  }
+    
+  
+  input.form-style{
+    border: 1px solid #9B9B9B;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.05));
+    border-radius: 4px;
+    height: 48px;
+    width: 348px;
+    padding-left: 20px;
+  }
+  
+  button.btn-save{
+    background-color: black;
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 10px;
+    float: right;
+    color: #eef2f5;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  p.notes{
+    float: right;
+    margin-right: 15px;
+  }
+  
+  button.btn-save:hover, button.btn-save:focus{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  button.btn-update{
+    border: 2px solid black;
+    float: right;
+    border-radius: 100%;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  button.btn-update:focus, button.btn-update:hover{
+    background-color: transparent;
+    border: 1px solid black;
+  }
+  
+  .icon-update{
+    height: 30px;
+    width: 25px;  
+  }
+  
+  p.teks{
+    float: right;
+    position: relative;
+    top: 10px;
+    left: 30px;
+  }
+  
+  img.image-prod{
+    border-radius: 15px;
+    max-height: 251px;
+  }
