@@ -44,15 +44,15 @@ function NewProducts() {
     formData.append('stock', formCreateProduct.stock)
     imageRef.current.value = ""
 
-    if (formCreateProduct.image == '' || formCreateProduct.image == null) {
+    if (formCreateProduct.image === '' || formCreateProduct.image == null) {
       swal('You must upload the image !')
-    } else if (formCreateProduct.productName == null || formCreateProduct.productName == '') {
+    } else if (formCreateProduct.productName === null || formCreateProduct.productName === '') {
       swal('Insert Product Name !')
-    } else if (formCreateProduct.purchasePrice == null || formCreateProduct.purchasePrice == '') {
+    } else if (formCreateProduct.purchasePrice === null || formCreateProduct.purchasePrice === '') {
       swal('Insert Purchase Price !')
-    } else if (formCreateProduct.salePrice == null || formCreateProduct.salePrice == '') {
+    } else if (formCreateProduct.salePrice === null || formCreateProduct.salePrice === '') {
       swal('Insert Sale Price !')
-    } else if (formCreateProduct.stock == null || formCreateProduct.stock == '') {
+    } else if (formCreateProduct.stock === null || formCreateProduct.stock === '') {
       swal('Insert Stock !')
     } else {
       axios.post(`${process.env.REACT_APP_API}/product/createproduct`, formData)
@@ -63,7 +63,7 @@ function NewProducts() {
             swal(`Success Create Product !`)
             history.push(`/product`)
           } else if (res.data.message === 'File too large') {
-            swal('File too large. FIle Max 2 mb!')
+            swal('File too large. FIle Max 100 kb!')
           } else if (res.data.message === "Your type file is incorect !\n.jpeg, .png, .jpg only.") {
             swal("Your Type File is not Support. jpeg, jpg, png only !")
           } else {
@@ -153,7 +153,6 @@ function NewProducts() {
         </form>
         <div className="row" data-aos="fade-up">
           <div className="col-10 mt-3">
-            <p className={style["notes"]}>***Notes :  Sale Price, Stock, and Purchase Price must be number !</p>
           </div>
           <div className="col">
             <button type="button" onClick={handleCreate} className={style['btn-save']}>Create Product </button>

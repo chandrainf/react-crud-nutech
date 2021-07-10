@@ -1,0 +1,23 @@
+{
+  "name": "react-crud-nutech",
+  "version": "0.1.0",
+  "description": "Soal Tes Praktek React JS Programmer",
+  "main": "index.js",
+  "scripts": {
+    "server": "concurrently \"cd backend && yarn run start\"",
+    "dev": "concurrently \"cd frontend && yarn run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandrainf/react-crud-nutech.git"
+  },
+  "keywords": [
+    "Nutech-Integrasi",
+    "ReactJs",
+    "Programmer",
+    "Test"
+  ],
+  "author": "",
+  "license": "ISC"
+  
+}

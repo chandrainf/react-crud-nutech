@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import style from './productdetails.module.css'
-import {jas} from '../../../assets/index'
+//import {jas} from '../../../assets/index'
 import { AiOutlineLock, AiOutlineUnlock, AiOutlineDelete } from "react-icons/ai";
 import {useParams, useHistory} from 'react-router-dom'
 import axios from 'axios'
@@ -49,7 +49,7 @@ function ProductDetails() {
     })
 
     Aos.init({duration: 3000})
-  }, [])
+  })
 
 
   const handleSave = (e) =>{
@@ -63,26 +63,26 @@ function ProductDetails() {
     formData.append('stock', formUpdateProduct.stock)
     imageRef.current.value = ""
 
-    if(formUpdateProduct.image=='' || formUpdateProduct.image==null){
+    if(formUpdateProduct.image==='' || formUpdateProduct.image===null){
       swal('You must upload the image !')
-    } else if (formUpdateProduct.productName==null || formUpdateProduct.productName==''){
+    } else if (formUpdateProduct.productName===null || formUpdateProduct.productName===''){
       swal('Insert Product Name !')
-    } else if (formUpdateProduct.purchasePrice==null || formUpdateProduct.purchasePrice==''){
+    } else if (formUpdateProduct.purchasePrice===null || formUpdateProduct.purchasePrice===''){
       swal('Insert Purchase Price !')
-    } else if (formUpdateProduct.salePrice==null || formUpdateProduct.salePrice==''){
+    } else if (formUpdateProduct.salePrice===null || formUpdateProduct.salePrice===''){
       swal('Insert Sale Price !')
-    } else if (formUpdateProduct.stock==null || formUpdateProduct.stock==''){
+    } else if (formUpdateProduct.stock===null || formUpdateProduct.stock===''){
       swal('Insert Stock !')
     } else{
       axios.put(`${process.env.REACT_APP_API}/product/updateproduct/${idProduct}`, formData)
       .then((res) => {
-        console.log(res.data, 'updataea image');
-         if(res.data.message === "Succes update product"){
+        console.log(res.data, 'update image');
+         if(res.data.message === "Success update product"){
           setFormUpdateProduct(formUpdateProduct)
           swal(`Success Update Product !`)
           history.push(`/product`)
          } else if(res.data.message=== 'File too large'){
-           swal('File too large. FIle Max 2 mb!')
+           swal('File too large. FIle Max 100 kb!')
          } else if(res.data.message==="Your type file is incorect !\n.jpeg, .png, .jpg only."){
            swal ("Your Type File is not Support. jpeg, jpg, png only !")
          } else{
@@ -100,10 +100,9 @@ function ProductDetails() {
   }
 
   const handleDelete = () =>{
-    let txt;
 
     let r = window.confirm("Are You Sure Want to Delete This Product ?")
-    if(r == true){
+    if(r === true){
       axios.delete(`${process.env.REACT_APP_API}/product/deleteproduct/${idProduct}`)
       .then((res) => {
         console.log(res.data)
@@ -116,9 +115,7 @@ function ProductDetails() {
           console.log(err);
       }) 
       
-    } else {
-      txt = "You pressed Cancel!";
-    }
+    } 
   }
 
   return (
@@ -133,7 +130,7 @@ function ProductDetails() {
             <p className={style["teks"]}>Enable Update</p>
           </div>
           <div className="col-5">
-            {btnUpdate=='enable'?
+            {btnUpdate==='enable'?
               <button className={style['btn-update']} onClick={handleUpdate}><AiOutlineLock className={style["icon-update"]}/></button>
             :
               <button className={style['btn-update']} onClick={handleUpdate}><AiOutlineUnlock className={style["icon-update"]}/></button>
@@ -216,7 +213,7 @@ function ProductDetails() {
             <p className={style["notes"]}>***Notes :  Sale Price, Stock, and Purchase Price must be number !</p>
           </div>
           <div className="col">
-            {btnUpdate=='enable'?
+            {btnUpdate==='enable'?
               null
             :
             <button type="button" onClick={handleSave} className={style['btn-save']}>Save </button>

@@ -22,7 +22,7 @@ exports.getProduct = async(req, res) => {
     .then((result) => {
       if (result.length > 0) {
         res.json({
-          message: `Succes get data`,
+          message: `Success get data`,
           status: 200,
           currentPage: page,
           totalPage: totalPage,
@@ -45,7 +45,7 @@ exports.getProductById = (req, res) => {
     .then((result) => {
       if (result.length > 0) {
         res.json({
-          message: `Succes get data id: ${id}`,
+          message: `Success get data id: ${id}`,
           status: 200,
           data: result
         })

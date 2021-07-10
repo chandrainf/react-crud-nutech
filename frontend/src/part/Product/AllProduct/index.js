@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import style from './allproduct.module.css'
-import { jas } from '../../../assets/index'
+//import toRupiah from '../../helpers/toRupiah'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 import Aos from 'aos';
@@ -11,8 +11,8 @@ function AllProduct() {
   const history = useHistory()
   const [getProduct, setGetProduct] = useState([])
   const [page, setPage] = useState(1);
-  const [by, setBy] = useState('productName');
-  const [order, setOrder] = useState("ASC");
+  const [by] = useState('productName');
+  const [order] = useState("ASC");
   const [title, setTitle] = useState({
     name: ''
   });
@@ -29,13 +29,13 @@ function AllProduct() {
       })
 
     Aos.init({ duration: 3000 })
-  }, [page, order, title.name])
+  }, [by, page, order, title.name])
 
   const getMapProduct = getProduct.data
-  const userPerPage = getProduct.MaxperPage
+  //const userPerPage = getProduct.MaxperPage
   const totalPage = getProduct.totalPage
-  const nowPage = getProduct.currentPage
-  const totalUsers = getProduct.totalUsers
+  //const nowPage = getProduct.currentPage
+  //const totalUsers = getProduct.totalUsers
 
   const handleFormSearch = (e) => {
     setTitle({
@@ -87,8 +87,8 @@ function AllProduct() {
                       />
                       <div className="card-body">
                         <p className={style["product-name"]}>{item.productName}</p>
-                        <p className={style["salePrice"]}>Sale Price : {item.salePrice}</p>
-                        <p className={style["purchasePrice"]}>Buying Price : {item.purchasePrice}</p>
+                        <p className={style["salePrice"]}>Sale Price : Rp. {item.salePrice}</p>
+                        <p className={style["purchasePrice"]}>Buying Price : Rp. {item.purchasePrice}</p>
                         <p className={style["teks-store"]}>Stock : {item.stock}</p>
 
                       </div>
@@ -100,7 +100,7 @@ function AllProduct() {
             : console.log("try again")}
         </div>
 
-        {/* AWAL BUTTON */}
+        {/* Awal BUtton */}
         <div className="row display-flex justify-content-center mt-2">
           {Array.from(Array(totalPage).keys()).map(item =>
             <>
